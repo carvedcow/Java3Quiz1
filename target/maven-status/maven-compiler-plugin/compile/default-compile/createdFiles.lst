@@ -1,0 +1,7 @@
+com\LibrarySystem\service\BookService.class
+com\LibrarySystem\service\NovelBookServiceImp.class
+com\LibrarySystem\configuration\WebAppInitializer.class
+com\LibrarySystem\configuration\WebMvcConfig.class
+com\LibrarySystem\service\CompBookServiceImp.class
+com\LibrarySystem\controller\LibrarySystemController.class
+com\LibrarySystem\model\Book.class
