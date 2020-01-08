@@ -11,15 +11,30 @@ import com.LibrarySystem.model.Book;
 @Service
 @Qualifier("computer")
 public class CompBookServiceImp implements BookService {
-
-	@Override
-	public List<Book> getBooks() {
-		List<Book> books = new ArrayList<Book>();
+	//values
+	List<Book> books;
+	
+	//constructors
+	public CompBookServiceImp() {
+		books = new ArrayList<Book>();
 
 		books.add(new Book("Intro to Java", "John", 600, 2010));
 		books.add(new Book("Intro to Python", "Dave", 450, 2016));
 		books.add(new Book("Intro to MySQL", "Dan", 300, 1999));
-
+	}
+	
+	
+	@Override
+	public List<Book> getBooks() {
 		return books;
 	}
+	
+	
+	@Override
+	public boolean addBook(Book book) {
+		books.add(book);
+		return true;
+	}
+	
+	
 }

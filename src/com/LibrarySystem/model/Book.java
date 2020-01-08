@@ -1,5 +1,8 @@
 package com.LibrarySystem.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Book {
 	
 	//values
