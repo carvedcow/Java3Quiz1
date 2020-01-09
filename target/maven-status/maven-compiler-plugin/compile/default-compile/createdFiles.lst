@@ -1,6 +1,9 @@
+com\LibrarySystem\dao\BookDaoImp.class
+com\LibrarySystem\configuration\DatabaseConfig.class
 com\LibrarySystem\service\BookService.class
 com\LibrarySystem\service\NovelBookServiceImp.class
 com\LibrarySystem\configuration\WebAppInitializer.class
+com\LibrarySystem\dao\BookDao.class
 com\LibrarySystem\configuration\WebMvcConfig.class
 com\LibrarySystem\service\CompBookServiceImp.class
 com\LibrarySystem\controller\LibrarySystemController.class
