@@ -27,6 +27,8 @@
 					<td><c:out value="${book.author}"></c:out></td>
 					<td><c:out value="${book.pageCount}"></c:out></td>
 					<td><c:out value="${book.year}"></c:out></td>
+					<td><a href="editBook?bookId=${book.id}">update me!</a></td>
+					<td><a href="deleteBook?bookId=${book.id}">delete me</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -29,4 +29,16 @@ public class NovelBookServiceImp implements BookService{
 		return true;
 	}
 
+	@Override
+	public Book getBookById(int bookId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateBook(Book book) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

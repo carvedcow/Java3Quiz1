@@ -8,5 +8,9 @@ public interface BookService {
 	public List<Book> getBooks();
 	
 	public boolean addBook(Book book);
+	
+	public Book getBookById(int bookId); // Read
+
+	public boolean updateBook(Book book); // Update
 
 }

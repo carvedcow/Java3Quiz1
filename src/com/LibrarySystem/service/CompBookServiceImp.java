@@ -44,6 +44,23 @@ public class CompBookServiceImp implements BookService {
 		//return true;
 		return bookDao.insertBook(book) > 0;
 	}
+
+
+	@Override
+	public Book getBookById(int bookId) {
+		// TODO Auto-generated method stub
+		return bookDao.getBookById(bookId);
+
+	}
+
+
+	@Override
+	public boolean updateBook(Book book) {
+		return bookDao.updateBook(book);
+
+	}
+
+
 	
 	
 }

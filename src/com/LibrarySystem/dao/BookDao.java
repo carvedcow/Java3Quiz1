@@ -10,4 +10,8 @@ public interface BookDao {
 	public int insertBook(Book book);
 	
 	public List<Book> getBooks();
+	
+	public Book getBookById(int bookId);
+	
+	public boolean updateBook(Book book);
 }

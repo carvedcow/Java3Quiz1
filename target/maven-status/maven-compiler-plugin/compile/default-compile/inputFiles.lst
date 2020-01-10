@@ -6,5 +6,6 @@ C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\model\Boo
 C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\configuration\WebAppInitializer.java
 C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\configuration\DatabaseConfig.java
 C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\service\BookService.java
+C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\dao\BookMapper.java
 C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\service\NovelBookServiceImp.java
 C:\Users\0777813\eclipse-workspace\LibrarySystem\src\com\LibrarySystem\configuration\WebMvcConfig.java

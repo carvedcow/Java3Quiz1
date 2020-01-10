@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.LibrarySystem.model.Book;
@@ -52,12 +53,30 @@ public class LibrarySystemController {
 		return modelView;
 	}
 	
-	//adding a new book post request
+	//adding a new book post request with /saveCompBook
 	@RequestMapping(value = "saveCompBook", method= RequestMethod.POST)
 	public String saveCompBook(@ModelAttribute("book") Book book) {
 		if(computerService.addBook(book))
 			return "redirect:/library/getCompBook";
 		else {
+			return "ErrorPage";
+		}
+	}
+	//updating book from /editBook
+	@RequestMapping(value = "editBook")
+	//RequestParam comes from comp-list.jsp
+	public ModelAndView editBook(@RequestParam("bookId") int bookId) {
+		ModelAndView mv = new ModelAndView("update-book");
+		Book book = computerService.getBookById(bookId);
+		mv.addObject("updatedBook", book);
+		return mv;
+	}
+	
+	@RequestMapping(value = "updateBook")
+	public String updateBook(@ModelAttribute("book") Book book) {
+		if (computerService.updateBook(book)) {
+			return "redirect:/library/getCompBook";
+		} else {
 			return "ErrorPage";
 		}
 	}
