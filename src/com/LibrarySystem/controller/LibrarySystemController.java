@@ -29,8 +29,18 @@ public class LibrarySystemController {
 	BookService novelService;
 	
 	
+	//adding a new book post request with /saveCompBook CREATE
+		@RequestMapping(value = "saveCompBook", method= RequestMethod.POST)
+		public String saveCompBook(@ModelAttribute("book") Book book) {
+			if(computerService.addBook(book))
+				return "redirect:/library/getCompBook";
+			else {
+				return "ErrorPage";
+			}
+		}
 	
-	//value and method to define what /getCompBook will do
+	
+	//value and method to define what /getCompBook will do READ
 	@RequestMapping(value = "/getCompBook", method = RequestMethod.GET)
 	public ModelAndView getCompList() {
 		ModelAndView modelView = new ModelAndView("comp-list");
@@ -42,7 +52,7 @@ public class LibrarySystemController {
 		return modelView;
 	}
 	
-	//value and method to define what /getNovelBook will do
+	//value and method to define what /getNovelBook will do READ
 	@RequestMapping(value = "/getNovelBook", method = RequestMethod.GET)
 	public ModelAndView getNovelList() {
 		ModelAndView modelView = new ModelAndView("novel-list");
@@ -53,16 +63,8 @@ public class LibrarySystemController {
 		return modelView;
 	}
 	
-	//adding a new book post request with /saveCompBook
-	@RequestMapping(value = "saveCompBook", method= RequestMethod.POST)
-	public String saveCompBook(@ModelAttribute("book") Book book) {
-		if(computerService.addBook(book))
-			return "redirect:/library/getCompBook";
-		else {
-			return "ErrorPage";
-		}
-	}
-	//updating book from /editBook
+	
+	//updating book from /editBook UPDATE
 	@RequestMapping(value = "editBook")
 	//RequestParam comes from comp-list.jsp
 	public ModelAndView editBook(@RequestParam("bookId") int bookId) {
@@ -77,6 +79,17 @@ public class LibrarySystemController {
 		if (computerService.updateBook(book)) {
 			return "redirect:/library/getCompBook";
 		} else {
+			return "ErrorPage";
+		}
+	}
+	
+	//delete book DELETE
+	@RequestMapping(value = "deleteBook")
+	public String deleteBook(@RequestParam("bookId") int bookId) {
+		if (computerService.deleteBook(bookId)) {
+			return "redirect:/library/getCompBook";
+		}
+		else {
 			return "ErrorPage";
 		}
 	}

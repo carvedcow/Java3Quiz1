@@ -34,10 +34,10 @@
 					<td><form:input path="pageCount" /></td>
 				</tr>
 
-					<tr>
-						<td>Year Published</td>
-						<td><form:input path="year" /></td>
-					</tr>
+				<tr>
+					<td>Year Published</td>
+					<td><form:input path="year" /></td>
+				</tr>
 
 				<tr>
 					<td colspan="2"><input type="submit" value="Update Book"></td>

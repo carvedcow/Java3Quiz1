@@ -1,15 +1,26 @@
 package com.LibrarySystem.model;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Component
+
+@Entity
+@Table(name ="book")
 public class Book {
 	
 	//values
+	@Id
+	@Column(name = "id")
 	private int id;
+	@Column(name = "title")
 	private String title;
+	@Column(name = "author")
 	private String author;
+	@Column(name = "pageCount")
 	private int pageCount;
+	@Column(name = "year")
 	private int year;
 	
 	//constructors

@@ -4,14 +4,12 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
 import com.LibrarySystem.model.Book;
 
-@Repository
-@Qualifier("bookDao")
+//@Repository
+//@Qualifier("bookDao")
 public class BookDaoImp implements BookDao {
 
 	JdbcTemplate jdbcTemplate;
@@ -59,6 +57,12 @@ public class BookDaoImp implements BookDao {
 						book.getId()
 						);
 		return updateResult > 0;
+	}
+
+	@Override
+	public boolean deleteBook(int bookId) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	

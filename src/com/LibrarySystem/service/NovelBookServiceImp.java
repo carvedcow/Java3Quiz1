@@ -41,4 +41,10 @@ public class NovelBookServiceImp implements BookService{
 		return false;
 	}
 
+	@Override
+	public boolean deleteBook(int bookId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

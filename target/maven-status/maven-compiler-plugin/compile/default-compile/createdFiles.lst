@@ -1,5 +1,6 @@
 com\LibrarySystem\dao\BookDaoImp.class
 com\LibrarySystem\configuration\DatabaseConfig.class
+com\LibrarySystem\dao\BookDaoHibernateImp.class
 com\LibrarySystem\service\BookService.class
 com\LibrarySystem\service\NovelBookServiceImp.class
 com\LibrarySystem\dao\BookMapper.class
