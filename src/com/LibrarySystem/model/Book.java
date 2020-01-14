@@ -1,8 +1,13 @@
 package com.LibrarySystem.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -11,17 +16,26 @@ import javax.persistence.Table;
 public class Book {
 	
 	//values
-	@Id
+	
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
+	
 	@Column(name = "title")
 	private String title;
+	
 	@Column(name = "author")
 	private String author;
+	
 	@Column(name = "pageCount")
 	private int pageCount;
+	
 	@Column(name = "year")
 	private int year;
+	
+	@OneToOne (cascade = CascadeType.ALL)
+	@JoinColumn (name="authorId")
+	private int authorId;
 	
 	//constructors
 	public Book() {
